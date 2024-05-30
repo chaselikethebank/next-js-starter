@@ -8,9 +8,7 @@ import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
 
 
-
 export default async function Page({
-
   searchParams,
 }: {
   searchParams?: {
@@ -37,7 +35,7 @@ export default async function Page({
       <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
         <Table query={query} currentPage={currentPage} />
       </Suspense>
-     
+
       {/*  <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
         <Table query={query} currentPage={currentPage} />
       </Suspense> */}
